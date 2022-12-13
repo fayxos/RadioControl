@@ -7,11 +7,17 @@
 
 import SwiftUI
 
+//TODO
+// sender infos
+
 @main
 struct RadioControlApp: App {
+    
+    @StateObject private var network = NetworkManager()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView(network: network)
         }
     }
 }
